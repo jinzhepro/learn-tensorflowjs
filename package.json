@@ -1,0 +1,27 @@
+{
+  "name": "learn-tensorflowjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinzhepro/learn-tensorflowjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinzhepro/learn-tensorflowjs/issues"
+  },
+  "homepage": "https://github.com/jinzhepro/learn-tensorflowjs#readme",
+  "description": "",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "@tensorflow/tfjs-vis": "^1.5.1"
+  },
+  "browserslist": ["last 1 Chrome version"]
+}
