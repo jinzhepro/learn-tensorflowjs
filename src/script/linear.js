@@ -11,6 +11,17 @@ const weight = [40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
  */
 async function runLinearRegression() {
 
+  await tfvis.render.scatterplot({
+    name: '训练数据',
+  },{
+    values: [
+      height.map((x, i) => ({x, y: weight[i]})),
+    ],
+    series: ['真实值']
+  },{
+    xAxisDomain: [140, 250],
+    yAxisDomain: [30, 150]
+  })
   // 定义数据
   // 对身高数据进行归一化处理，减去150后除以10
   const input = tf.tensor(height).sub(150).div(10);
