@@ -39,6 +39,7 @@ async function runLinearRegression() {
 
   // 训练模型
   await model.fit(input, output, {
+    batchSize: 10,
     epochs: 100,
     callbacks: tfvis.show.fitCallbacks({name: '训练过程'}, ['loss'])
   });
