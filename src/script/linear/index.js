@@ -5,11 +5,11 @@ import {data} from "./data";
 
 /**
  * 将数据转换为标准化的Tensor格式
- * 此函数首先对数据进行洗牌，然后将输入（Weight_in_lbs）和标签（Miles_per_Gallon）转换为Tensor格式
+ * 此函数首先对数据进行洗牌，然后将输入（Horsepower）和标签（Miles_per_Gallon）转换为Tensor格式
  * 接着，对输入和标签进行标准化处理，以确保它们在训练模型时具有相似的尺度
  * 最后，返回包含标准化后的输入、标签及其最大和最小值的对象
  *
- * @param {Array} data - 包含Weight_in_lbs和Miles_per_Gallon属性的数据数组
+ * @param {Array} data - 包含Horsepower和Miles_per_Gallon属性的数据数组
  * @returns {Object} 包含标准化后的输入、标签及其最大和最小值的对象
  */
 const covertTensor = (data)=>{
@@ -19,7 +19,7 @@ const covertTensor = (data)=>{
     tf.util.shuffle(data)
 
     // 将输入（Weight_in_lbs）和标签（Miles_per_Gallon）转换为2D Tensor
-    const inputsTensor = tf.tensor2d(data.map(d => [d.Weight_in_lbs]))
+    const inputsTensor = tf.tensor2d(data.map(d => [d.Horsepower]))
     const labelsTensor = tf.tensor2d(data.map(d => [d.Miles_per_Gallon]))
 
     // 计算输入和标签的最大值和最小值，用于标准化
@@ -126,7 +126,7 @@ const testModel = (model, inputData, normalizedData)=>{
   })
   // 将原始输入数据整理为[{x, y}]格式，用于可视化
   const originalPoints = inputData.map(d => ({
-    x: d.Weight_in_lbs,
+    x: d.Horsepower,
     y: d.Miles_per_Gallon
   }))
   // 使用TensorFlow.js的可视化工具渲染散点图，比较原始数据和预测数据
