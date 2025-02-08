@@ -12,7 +12,7 @@ const weight = [40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
 async function runLinearRegression() {
 
   await tfvis.render.scatterplot({
-    name: '训练数据',
+    name: '线性回归训练数据',
   },{
     values: [
       height.map((x, i) => ({x, y: weight[i]})),
