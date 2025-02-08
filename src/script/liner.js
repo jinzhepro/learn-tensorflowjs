@@ -43,6 +43,8 @@ async function runLinearRegression() {
     ],
     series: ['真实值', '预测值']
   },{
+    xAxisDomain: [140, 250],
+    yAxisDomain: [30, 150]
   })
 
   // 使用训练好的模型对特定的身高值进行预测，并弹出预测的体重值
