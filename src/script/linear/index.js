@@ -13,6 +13,20 @@ import {data} from "./data";
  * @returns {Object} 包含标准化后的输入、标签及其最大和最小值的对象
  */
 const covertTensor = (data)=>{
+  // 渲染初始数据
+  tfvis.render.scatterplot({
+    name: '训练数据',
+  }, {
+      values: data.map(d => ({
+        x: d.Horsepower,
+        y: d.Miles_per_Gallon
+      }))
+    },
+    {
+      xLabel: '马力',
+      yLabel: '每加仑英里数',
+    }
+  )
   // 使用tf.tidy确保在函数执行完毕后清理内存
   return tf.tidy(()=>{
     // 对数据进行洗牌，以增加数据的随机性
