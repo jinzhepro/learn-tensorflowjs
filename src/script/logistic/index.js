@@ -23,10 +23,6 @@ const covertToTensor = (data)=>{
       ],
       series: ['0', '1']
     },
-    {
-      xLabel: '马力',
-      yLabel: '每加仑英里数',
-    }
   )
 
   // 创建一个包含两个数组的数组，用于存储输入和输出数据
