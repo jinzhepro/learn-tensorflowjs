@@ -11,6 +11,9 @@ async function runXorRegression() {
   // 获取400个数据点用于训练
   const data = getData(400)
 
+  // 将数据进行随机打乱，以减少训练过程中的偏差
+  tf.util.shuffle(data)
+
   // 渲染散点图，可视化训练数据
   await tfvis.render.scatterplot({
     name: 'xor训练数据'

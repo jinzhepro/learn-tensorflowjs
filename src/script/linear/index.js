@@ -5,12 +5,15 @@ import * as tfvis from '@tensorflow/tfjs-vis'
 const height = [150, 160, 170, 180, 190, 200, 210, 220, 230, 240]
 const weight = [40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
 
+
 /**
  * 异步函数，用于执行线性回归分析
  * 该函数从输入数据（身高）预测输出数据（体重）
  */
 async function runLinearRegression() {
 
+  // 将身高和体重数据进行随机打乱，以减少训练过程中的偏差
+  tf.util.shuffleCombo(height, weight)
   // 渲染散点图，可视化训练数据
   await tfvis.render.scatterplot({
     name: '线性回归训练数据',
@@ -64,6 +67,7 @@ async function runLinearRegression() {
   // 使用训练好的模型对特定的身高值进行预测，并弹出预测的体重值
   alert(model.predict(tf.tensor([260]).sub(150).div(10)).mul(10).add(40).dataSync())
 }
+
 
 
 

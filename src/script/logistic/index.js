@@ -11,6 +11,9 @@ async function runLogisticRegression() {
   // 生成一个包含400个样本的二分类数据集
   const data = generateBinaryClassificationDataset(400)
 
+  // 将数据进行随机打乱，以减少训练过程中的偏差
+  tf.util.shuffle(data)
+
   // 将生成的数据集渲染为散点图，以便可视化数据分布
   await tfvis.render.scatterplot({
     name: '逻辑回归训练数据'
