@@ -30,7 +30,7 @@ async function runLinearRegression() {
     callbacks: tfvis.show.fitCallbacks({name: '训练过程'}, ['loss'])
   });
 
-  // 使用训练好的模型预测新的x值
+  // 使用训练好的模型对输入数据进行预测
   let prediction = model.predict(input);
 
   // 可视化预测结果与真实值的对比
