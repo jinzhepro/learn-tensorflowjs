@@ -11,6 +11,7 @@ const weight = [40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
  */
 async function runLinearRegression() {
 
+  // 渲染散点图，可视化训练数据
   await tfvis.render.scatterplot({
     name: '线性回归训练数据',
   },{
@@ -22,6 +23,7 @@ async function runLinearRegression() {
     xAxisDomain: [140, 250],
     yAxisDomain: [30, 150]
   })
+
   // 定义数据
   // 对身高数据进行归一化处理，减去150后除以10
   const input = tf.tensor(height).sub(150).div(10);
@@ -61,6 +63,7 @@ async function runLinearRegression() {
   // 使用训练好的模型对特定的身高值进行预测，并弹出预测的体重值
   alert(model.predict(tf.tensor([260]).sub(150).div(10)).mul(10).add(40).dataSync())
 }
+
 
 
 window.onload = () => {
