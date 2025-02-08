@@ -139,7 +139,7 @@ const testModel = (model, inputData, normalizedData)=>{
       ],
       series: ['原始数据', '预测数据']},
     {
-      xLabel: '车重',
+      xLabel: '马力',
       yLabel: '每加仑英里数',
     }
   )
