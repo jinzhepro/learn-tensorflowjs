@@ -5,7 +5,9 @@
 <!-- 逻辑回归 -->
 <!--<script src="script/logistic/index.js"></script>-->
 <!-- XOR -->
-<script src="script/xor/index.js"></script>
+<!--<script src="script/xor/index.js"></script>-->
+<!-- IRIS -->
+<script src="script/iris/index.js"></script>
 <div>
   <h3>逻辑回归测试</h3>
   <form action="" onsubmit="predict(this);return false">
@@ -14,12 +16,22 @@
     <button type="submit" >预测</button>
   </form>
   <hr>
-  <h3>XOR归测试</h3>
+  <h3>XOR测试</h3>
   <form action="" onsubmit="predict(this);return false">
     <input type="text" name="x" placeholder="x">
     <input type="text" name="y" placeholder="y">
     <button type="submit" >预测</button>
   </form>
+  <hr>
+  <h3>iris测试</h3>
+  <form action="" onsubmit="predict(this);return false">
+    花萼长度：<input type="text" name="a" placeholder="x"><br>
+    花萼宽度：<input type="text" name="b" placeholder="x"><br>
+    花瓣长度：<input type="text" name="c" placeholder="x"><br>
+    花瓣宽度：<input type="text" name="d" placeholder="x"><br>
+    <button type="submit" >预测</button>
+  </form>
+  <hr>
 </div>
 
 
