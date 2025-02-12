@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "hs": "http-server src/script/mnist/data --cors"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,10 @@
     "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
-    "@tensorflow/tfjs-vis": "^1.5.1"
+    "@tensorflow/tfjs-vis": "^1.5.1",
+    "http-server": "^14.1.1"
   },
-  "browserslist": ["last 1 Chrome version"]
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
