@@ -8,8 +8,10 @@
 <!--<script src="script/xor/index.js"></script>-->
 <!-- IRIS -->
 <!--<script src="script/iris/index.js"></script>-->
-<!-- 过拟合 -->
-<script src="script/overfit/index.js"></script>
+<!-- 过拟合和欠拟合 -->
+<!--<script src="script/overfit/index.js"></script>-->
+<!-- mnist -->
+<script src="script/mnist/index.js"></script>
 
 <div>
   <h3>逻辑回归测试</h3>
@@ -35,6 +37,13 @@
     <button type="submit" >预测</button>
   </form>
   <hr>
+  <h3>mnist测试</h3>
+  <canvas id="canvas" height="300" width="300" style="border: 1px solid #f2f2f2">
+
+  </canvas>
+  <br>
+  <button onclick="window.predict()">预测</button>
+  <button onclick="window.clear()">清空</button>
 </div>
 
 
